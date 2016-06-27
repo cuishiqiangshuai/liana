@@ -1,0 +1,11 @@
+baseURL:  http://115.29.113.198/index.php?s=/ （get请求
+）
+
+轮播图：Api/index/slide/tag/temai  （get请求）
+
+
+列表数据：http://115.29.113.198/index.php?s=/   （get请求）
+参数（param）: page(int 类型，可选)
+
+详情：Api/Goods/info   （get请求）
+参数：id (int类型，商品ID,利用列表数据里的id)

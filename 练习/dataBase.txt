@@ -1,0 +1,15 @@
+建立一个学生表表名studet，包括学号sno，姓名snabbe，性别spex，年龄sage，院系six，专业smi
+要求：设置学号为主键，要求姓名非空
+create table if not exists studet(sno primary key,sname text not null,ssex text not null,sage integer check(sage>0),six text not null,smi text not null);
+
+1.修改表名为students
+alter table studet rename to students;
+2.增加一个表teachers，包括姓名，年龄
+create table if not exists teachers(tname text not null,tage integer check(tage>0));
+3.为teachers表增加一个性别列
+alter table teachers add column sex text;
+4.向students表中插入多条数据（要留至少有两个年龄相同）
+insert into students(sno,sname,ssex,sage,six,smi) values (001,’cuiyi’,’man’,20,’computer’,’haha’);
+insert into students(sno,sname,ssex,sage,six,smi) values (002,’cuier’,’weman’,20,’computer’,’hehe’);
+5.使students表按年龄大小升序排列，年龄相同按照名字降序排列
+select *from students order by sage asc,aname desc;
